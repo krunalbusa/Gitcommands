@@ -11,6 +11,7 @@
 
 
 
+
 --> config commands
 
 -git config --global color.ui true/false(//for colour of text) 
