@@ -1,0 +1,201 @@
+-git clone
+
+-git pull 
+
+-git add filename
+
+-git push origin master(//your main branch name)
+
+-git commit -m "type message here"(//for add message )
+
+
+
+
+--> config commands
+
+-git config --global color.ui true/false(//for colour of text) 
+
+-git config --global user.name "full name"(//define name of user globally)
+
+-git config --global user.email "your mail"(//define mail of user globally)	
+
+-git config user.email(//to know which email is used)
+
+-git add .(//for staging all the file in local .gitit only tracked directory files)
+
+-git add --all(//same for staging all the changies in local .git but it add all the untracked file)
+
+
+--> remote commands
+
+
+-git remote -v (//it can provide the repo which we can pull or push)
+
+-git remote add origin "enter the address"(//to set the origin insted of that long address it needed when you first creat your repo in local not pull the repo from remote )
+
+
+
+
+--> branch commands
+
+-(//we can add branch from github and we can not create a empty branch so we have to refer new branch from past brnach like if i create new testing branch than it refer from master branch so all te files of master branch is copied but after that both the branch are not connected so changes in master dosen't affect the testing branch)
+
+-git branch(//it gives all brnach name)
+
+-git brnach "new brnach name"(//for creating new branch )
+
+-git branch -m "old brnach name" "new brnah name"(//to change the brnach name)
+
+
+
+
+-git checkout "branch name"(//to switch the branch)
+
+-git checkout -b "brnach name"(//it create a new branch if that named brnach is not there and switch the brnach to that new branch)
+
+
+
+--> merge
+
+-git merge "name branch which we have to merge"(//after merge we have to push that code to our branch)
+
+
+-->gitignore file
+
+-for ignore some file we can add that file into .gitignore file or use stash command.
+
+
+
+--> stash commands
+
+-git stash (//it add the file into stash and if you push code than that file dosen't get push into remote but those files are also temparory removed from local when you 	      hit pop than it back in local)
+
+-git stash -u (// it add all the files untracked file also in simple it dosen't add untraced file)
+
+-git stash pop(//for pop that file from stash and if you change something in files than pop than it gives conflict)
+
+-git stash pop stash@{}(//to pop particular file)
+
+-git stash apply(//if you change in file which are stashed and if you use this command than it directly accept the changes not gives conflict)
+
+-git stash clear(//it remove all stashed file from directory)
+
+-git stash list(//it gives list of files which are in stash)
+
+
+
+
+--> diff commands
+
+-git diff(//it compare staging are to work directory)
+
+-git diff --staged(//it gives data which are staged but not commited yet)
+
+
+
+--> git show commands
+
+-git log(//it shows how many commit has done)
+
+-git log --oneline(//it gives details in one line)
+
+-git log -s "message"(//tha message is from file which we want to see that whoes add that line in code and when that msg is commited)
+
+-git reflog(//it shows only first 7 digits of commit and only shaws a msg)
+
+-git show "first 7 numbers of commit" (//it shows all commit detalis)
+
+
+//so log vs blame in blame it gives details of all the lines of files but if you want to particular details of that text than you need to use log -S can't use blame but -w,-m,-c command we can use with blame only. 
+
+
+-->blame commands
+
+-git blame "file name" (// it gives that file's commit id no who did it when did it and how many lines are file content and what content file have)
+
+-git blame -L 1,4 "file name"(//it gives that much line of code only not all the file)
+ 
+-git blame -e "file name" (//it gives email insted of author name)
+
+-git blame -w "file name" (//ig gives that lines which have modified by someone not all the file) (doubt)
+
+-git blame -M "file name" (//it gives the copied or moved lines with in the file which are done by last author)
+
+-git blame -C "file name" (// it goves the copied or moved lines from other files also which are done by last author)
+
+
+
+-->git clean
+
+-git clean -n (//it stack all the untracked file for removal)
+
+-git clean -f (//it remove all that stack files)
+
+-git clean -i(//if i stack some files by using -n command and now i want to clean that file so this command will be used)
+
+
+
+-->git revert
+
+-git revert "commit id" (//it revert all the things which are done by that commit it dose't mean that commit is deleted but it generate new commit old ones remain same)
+
+-git revert "commit id" --no-edit(//it will not open the edit window direct revert is done)
+
+-git revert "commit id" --no-commit(//it will revert the commit but not creating new commit insted of that it add all in stage)
+
+
+
+//diff btw revert vs reset 
+-revert dosen't change the history of project so it will be more safe than reset.
+-reset will also goes to last commit but it dosen't chnage anything in new file it only reset the commit 
+
+
+
+-->git reset 
+
+-git reset "commit id"(//it will reset that commit but it dosen't change anything in file)
+
+-git reset --hard "commit id"(//it will hardly reset commit and delete all that thing which are btw that both commits)
+
+-git reset --mixed "commit id"(//it goes to that commit and if any new file is created in btw than it add that file into untracked)
+
+-git reset --soft "commit id"(//it goes to that commit and if any new file is created in btw than it add that file into staging area)
+
+-git reset file1 file2(//if you want to unstage the files than you can use this command it dosen't affect the data of file it only unstage the file)
+
+
+-->git rm
+
+-git rm "file name"(//it will remove file if it commited)
+-git rm -f "file name"(//it will remove file whether it is commited or not but it dosn't remove untracked files)
+
+--> tag commands
+
+-git tag(//it is use as checkpoints it gives tag to commit)(//if i add tag "v1" to my commit now i have done new commit so and i want back at my old commit cause this new commit have some 	error so if i run "git checkout v1" than it automatically goes to that previous commit and new commit will be deleted.so we can use this tag as a chackpoints.)
+
+
+ 
+
+
+-git mv "existing file name with extension" "new file name"(//to change file name)
+
+
+
+
+
+
+
+//git steps are:
+-clone the project
+-add files
+-commit that file
+-push into remote
+
+
+//doubt 
+
+- if we creat new file and than we add that file and than we hit command git rm -f "file name" than how can we restore that file?
+- we commit 4-5 files and now i have to uncommit only specific one of two files than?
+
+
+
