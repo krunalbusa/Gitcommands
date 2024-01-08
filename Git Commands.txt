@@ -190,6 +190,7 @@
 
 -git tag -n (//it shows the all tag ist with msg)
 
+ 
 
  
 
