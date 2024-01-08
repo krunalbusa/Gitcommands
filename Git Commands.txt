@@ -22,6 +22,8 @@
 
 -git config user.email(//to know which email is used)
 
+-git config --global core.editor "your-preferred-editor" (//for change the editor)
+
 -git add .(//for staging all the file in local .gitit only tracked directory files)
 
 -git add --all(//same for staging all the changies in local .git but it add all the untracked file)
@@ -47,6 +49,10 @@
 
 -git branch -m "old brnach name" "new brnah name"(//to change the brnach name)
 
+-git branch -d "brnach name"(//to delete the brnach which are up to date with default brnach or not proper merged with default brnach)
+
+-git branch -D "brnach name"(//it delete the brnach force fully.)
+
 
 
 
@@ -59,6 +65,8 @@
 --> merge
 
 -git merge "name branch which we have to merge"(//after merge we have to push that code to our branch)
+
+-git merge --abort(//to abort the merge if conflict occurred)
 
 
 -->gitignore file
@@ -102,9 +110,9 @@
 
 -git log -s "message"(//tha message is from file which we want to see that whoes add that line in code and when that msg is commited)
 
--git reflog(//it shows only first 7 digits of commit and only shaws a msg)
+-git reflog(//it shows only first 7 digits of commit and onlyq shaws a msg all shows all log of all brnaches )
 
--git show "first 7 numbers of commit" (//it shows all commit detalis)
+-git show "commit no" (//it shows all commit detalis)
 
 
 //so log vs blame in blame it gives details of all the lines of files but if you want to particular details of that text than you need to use log -S can't use blame but -w,-m,-c command we can use with blame only. 
@@ -174,6 +182,14 @@
 
 -git tag(//it is use as checkpoints it gives tag to commit)(//if i add tag "v1" to my commit now i have done new commit so and i want back at my old commit cause this new commit have some 	error so if i run "git checkout v1" than it automatically goes to that previous commit and new commit will be deleted.so we can use this tag as a chackpoints.)
 
+-git tag "tage name" "hash code"(//to set tag to that commit)
+
+-git tag -d "tag name"(//to delete the tag)
+
+-git tag -a "  tag name" -m "Tag message" "hash code"(//to set tag name and set message to that tag to that commit)
+
+-git tag -n (//it shows the all tag ist with msg)
+
 
  
 
@@ -198,5 +214,17 @@
 - if we creat new file and than we add that file and than we hit command git rm -f "file name" than how can we restore that file?
 - we commit 4-5 files and now i have to uncommit only specific one of two files than?
 
+//task
+
+- what is hashcode and how it generate
+Ans: SHA-1 (secure Hash Algorithm 1) this Algorithm is used for generating a hasecode.length=40 letters.
+
+- diff btw hashcode and uuid
+
+- git commit thi last ma kai jagyae jai sakay without new comit banavya vagar
+ans: git commit --amend (it will open the text editor in this we can change the commit msg)
 
 
+
+
+242f012
