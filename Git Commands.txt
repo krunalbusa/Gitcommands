@@ -225,7 +225,3 @@ Ans: SHA-1 (secure Hash Algorithm 1) this Algorithm is used for generating a has
 - git commit thi last ma kai jagyae jai sakay without new comit banavya vagar
 ans: git commit --amend (it will open the text editor in this we can change the commit msg)
 
-
-
-
-242f012
