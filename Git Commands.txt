@@ -186,6 +186,10 @@ one branch we commit that file but in other we don't have commit that file so al
 -git reset file1 file2(//if you want to unstage the files than you can use this command it dosen't affect the data of file it only unstage the file)
 
 
+-->git Rebase
+-git rebase "branch name"(//it will connect this branch to head of that branch and change the history of log)
+
+
 -->git rm
 
 -git rm "file name"(//it will remove file if it commited)
@@ -199,10 +203,9 @@ one branch we commit that file but in other we don't have commit that file so al
 
 -git tag -d "tag name"(//to delete the tag)
 
--git tag -a "  tag name" -m "Tag message" "hash code"(//to set tag name and set message to that tag to that commit)
+-git tag -a " tag name" -m "Tag message" "hash code"(//to set tag name and set message to that tag to that commit)
 
 -git tag -n (//it shows the all tag ist with msg)
-
  
 
  
@@ -213,7 +216,11 @@ one branch we commit that file but in other we don't have commit that file so al
 
 
 
-
+-->code review
+-first we create feature branch then we done some chnages in file and than commit that file and push into remote now you
+ create one pull request with the all description like what you have done and assign it to reviewer who can revie all
+  the file and than give soe comments which you have to resolve and than h chack that and make that pull request final
+   and owner can accept the pull request and our brnach will be merge to main branch and than delete the branch.
 
 
 //git steps are:
@@ -225,27 +232,28 @@ one branch we commit that file but in other we don't have commit that file so al
 
 //doubt 
 
-- if we creat new file and than we add that file and than we hit command git rm -f "file name" than how can we restore that file?
-ans:no
-- we commit 4-5 files and now i have to uncommit only specific one of two files than?
+-if we creat new file and than we add that file and than we hit command git rm -f "file name" than how can we restore that file?
+ ans:no
+- we commit 4-5 files and now i have to uncommit only specific one or two files than?
+ 
 
 
 //task
 
-- what is hashcode and how it generate
-Ans: SHA-1 (secure Hash Algorithm 1) this Algorithm is used for generating a hasecode.length=40 letters.
+-what is hashcode and how it generate
+ Ans: SHA-1 (secure Hash Algorithm 1) this Algorithm is used for generating a hasecode.length=40 letters.
 
-- diff btw hashcode and uuid
+-diff btw hashcode and uuid
 
-- git commit thi last ma kai jagyae jai sakay without new comit banavya vagar
-ans: git commit --amend (it will open the text editor in this we can change the commit msg)
+-git commit thi last ma kai jagyae jai sakay without new comit banavya vagar
+ ans: git commit --amend (it will open the text editor in this we can change the commit msg)
 
 -can we push same file in multiple repo at the same time?
-ans:yes we can first we have to set origin of all the repo so use '  git remote add repo1(//this is the name of origin) "repo url"  ' 
+ ans:yes we can. first we have to set origin of all the repo so use '  git remote add repo1(//this is the name of origin) "repo url"  ' 
  like wise this we can add all repo and than we add the file and commit that file and than we have to push that file by using 
  this '  git push "name of origin" "branch_name"  ' like wise this for all repo.
 
--if create brnach from main which have one file thn in new branch copy of that file will generate and storage will increase?
-ans:at the point whene branch is created no new file will generate it shared the old one but whene you modified tat file 
- than git will store it in commit which contains what changes are don in file so not all file but only changes will be
+-if we create brnach from main which have one file than in new branch copy of that file will generate and storage will increase?
+ ans:at the point whene branch is created no new file will generate it shared the old one but whene you modified that file 
+ than git will store it in commit which contains what changes are done in file so not all file but only changes will be
  store.
